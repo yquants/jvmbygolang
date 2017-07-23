@@ -2,7 +2,7 @@ package constants
 
 import (
 	"jvmgo/ch05/instructions/base"
-	"jvmgo/ch04/rtda"
+	"jvmgo/ch05/rtda"
 )
 
 type ACONST_NULL struct{ base.NoOperandsInstruction }

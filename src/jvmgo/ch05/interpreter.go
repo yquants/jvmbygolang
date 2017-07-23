@@ -1,4 +1,4 @@
-package jvmgo
+package main
 
 import (
 	"jvmgo/ch05/classfile"
@@ -15,7 +15,7 @@ func interpret(methodInfo *classfile.MemberInfo) {
 	bytecode := codeAttr.Code()
 
 	thread := rtda.NewThread()
-	frame := thread.NewFrame(maxLocals, maxStack)
+	frame := thread.NewFrame(uint(maxLocals), uint(maxStack))
 	thread.PushFrame(frame)
 
 	defer catchErr(frame)
